@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+body{
+    margin: 0;
+}
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 70px;
+    text-shadow: 0 0 10px white;
+    background-color: white;
+    padding: 24px;
+    box-shadow: 0 0 20px 3px #5e5e5e;
+    border-radius: 30px;
+    width: 500px;
+}
+
+    
+
+.hero_desc{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
