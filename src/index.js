@@ -11,8 +11,8 @@ import {material3d ,materialMetal, materialNature, materialCouro, materialGlass 
 
 //nao pode usar o mesmo objeto em cenas diferentes
 //caso precisar duplique o objeto
-Plane('hero', material3d, luz, camera, cena, true);
-objeto('herob', 'objeto.obj', material3d, luz, camera, true);
+//Plane('hero', material3d, luz, camera, cena, true);
+//objeto('herob', 'objeto.obj', material3d, luz, camera, true);
 
 
 
