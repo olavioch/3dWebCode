@@ -1,5 +1,5 @@
 const camera = {
-    posicao : [0, 0, 1.01]
+    posicao : [0, 0, 3]
 }
 const camerab = {
     posicao : [0, 0, 2]

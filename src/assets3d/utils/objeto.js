@@ -60,8 +60,11 @@ function objeto(id, objeto, material3d, luz, camera, cena, enable){
 			}
 
 			// material
-				const material = new THREE.MeshStandardMaterial(material3d);
-				material.opacity = 0;
+				const material = new THREE.MeshStandardMaterial(material3d.mat);
+				if(material3d.transparent == true){
+					material.transparent = material3d.transparent;
+					material.opacity = material3d.opacity;
+				}
 			// model
 			function onProgress( xhr ) {
 
