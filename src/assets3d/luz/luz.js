@@ -2,7 +2,7 @@ var luz = {
     type: 'point',
     intensidade: 1,
     cor: 0xffffff,
-    posicao: [0, 0, 1]
+    posicao: [-2, -4, 11]
 }
 
 export default luz;
