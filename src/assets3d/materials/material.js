@@ -3,20 +3,20 @@ import './modelnormal.jpg';
 import './model.jpg';
 import './bolaNormal.png';
 import './bola.jpg';
+import './metal.jpg'
+import './normalMetal.png';
 import '../cena/back.jpg';
 
 const normal = new THREE.TextureLoader().load('modelnormal.jpg');
 const textura = new THREE.TextureLoader().load('model.jpg');
 const bolaNormal = new THREE.TextureLoader().load('bolaNormal.png');
 const bola = new THREE.TextureLoader().load('bola.jpg');
-		
+const metalNormal = new THREE.TextureLoader().load('normalMetal.png');
+const metal = new THREE.TextureLoader().load('metal.jpg');
+
 const textureReflection = new THREE.TextureLoader().load('back.jpg');
 textureReflection.encoding = THREE.sRGBEncoding;
 textureReflection.mapping = THREE.EquirectangularReflectionMapping;
-
-const textureRefraction = new THREE.TextureLoader().load('back.jpg');
-textureRefraction.encoding = THREE.sRGBEncoding;
-textureRefraction.mapping = THREE.EquirectangularRefractionMapping;
 
 const material3d = {
     transparent: false,
@@ -50,12 +50,12 @@ const material3dB = {
     transparent: false,
     mat:{
         color: new THREE.Color(0xffffff),
-        map: bola,
-        bumpMap: bolaNormal,
-        bumpScale: 0.03,
+        map: metal,
+        bumpMap: metalNormal,
+        bumpScale: 0.009,
         envMap: textureReflection,
         envMapIntensity: 2,
-        roughness: 0,
+        roughness: 0.2,
         metalness: 1, 
         flatShading: false 
     }

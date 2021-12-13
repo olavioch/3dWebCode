@@ -3,6 +3,7 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: 'Oswald';
 }
 .hero_desc{
     position: absolute;
@@ -50,7 +51,7 @@ section{
 .cards{
     display: flex;
     justify-content: space-around;
-    padding: 80px;
+    padding: 10px 78px 50px;
 }
 .card{
     display: flex;
@@ -61,5 +62,10 @@ section{
 }
 .card p{
     text-transform: uppercase;
-    font-family: 'Oswald';
+}
+h2{
+    font-size: 2vw;
+    border-top: 5px solid black;
+    display: inline-block;
+    margin: 58px 100px 23px;
 }
