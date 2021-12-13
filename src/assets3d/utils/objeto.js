@@ -2,8 +2,6 @@ import * as THREE from 'three';
 import { OBJLoader } from './OBJLoader';
 import { ArcballControls } from '../controle/ArcballControls';
 import '../cena/back.jpg';
-import '../materials/material.mtl'
-import { Mesh, Scene } from 'three';
 
 function objeto(id, objeto, material3d, luz, camera, cena, enable){	
 	let cam, scene, renderer;

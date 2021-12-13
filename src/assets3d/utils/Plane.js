@@ -1,8 +1,5 @@
 import * as THREE from 'three';
-import { OBJLoader } from './OBJLoader';
-import { ArcballControls } from '../controle/ArcballControls';
 import '../cena/back.jpg';
-import '../materials/material.mtl'
 
 function Plane(id, material3d, luz, camera, cena){	
 	let cam, scene, renderer;
