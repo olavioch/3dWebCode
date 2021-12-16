@@ -7,14 +7,8 @@ import {material3d, material3dA, material3dB, material3dC, materialConcreto} fro
 import {configModel, configBolaB, configBolaC, configBola, configCube} from "./assets3d/objetos3d/config";
 
 
-
-
 objeto('hero', configModel, material3d, luz, camera, cena);
 
-
-objeto('3dA', configBola, material3dA, luz, camera, cenaBack);
-objeto('3dB', configBolaB, material3dB, luz, camera, cenaColor);
-objeto('3dC', configBolaC, material3dC, luz, camera, cenaBack);
 
 
 //Plane('hero', material3d, luz, camera, cena, true);

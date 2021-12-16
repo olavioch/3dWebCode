@@ -1,8 +1,8 @@
-var luz = {
+const luz = {
     type: 'point',
-    intensidade: 1,
-    cor: 0xffffff,
-    posicao: [-2, -4, 11]
+    intensity: 1,
+    color: 0xffffff,
+    position: [-2, -4, 11]
 }
 
 export default luz;

@@ -16,30 +16,30 @@ function objeto(id, config, material3d, luz, camera, cena){
 		
 		//Criando uma camera para exibir o conteudo 3d
 		cam = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 2000 );
-		cam.position.x = camera.posicao[0];
-		cam.position.y = camera.posicao[1];
-		cam.position.z = camera.posicao[2];
+		cam.position.x = camera.position[0];
+		cam.position.y = camera.position[1];
+		cam.position.z = camera.position[2];
 		
 		//Criando uma cena para exibir o conteudo 3d
 		scene = new THREE.Scene();
-		if(cena.cor[0] == 'color'){
-			scene.background = new THREE.Color(cena.cor[1]);
+		if(cena.color[0] == 'color'){
+			scene.background = new THREE.Color(cena.color[1]);
 		}
 
 		//Criando uma luz para iluminar o objeto 3d
-		const pointLight = new THREE.DirectionalLight( new THREE.Color(luz.cor), luz.intensidade );
-		pointLight.translateX(luz.posicao[0]);
-		pointLight.translateY(luz.posicao[1]);
-		pointLight.translateZ(luz.posicao[2]);
+		const pointLight = new THREE.DirectionalLight( new THREE.Color(luz.color), luz.intensity );
+		pointLight.translateX(luz.position[0]);
+		pointLight.translateY(luz.position[1]);
+		pointLight.translateZ(luz.position[2]);
 		
 		//Unindo todos os itemns
 		cam.add( pointLight );
 		scene.add( cam );
-		if(cena.cor[0] == 'texture'){
+		if(cena.color[0] == 'texture'){
 			const geometrySky = new THREE.SphereGeometry( 500, 60, 40 );
 			// invert the geometry on the x-axis so that all of the faces point inward
 			geometrySky.scale( - 1, 1, 1 );
-			const textureSky = new THREE.TextureLoader().load( cena.cor[1] );
+			const textureSky = new THREE.TextureLoader().load( cena.color[1] );
 			const matSky = new THREE.MeshBasicMaterial( { map: textureSky } );
 			const sky = new THREE.Mesh( geometrySky, matSky);
 			sky.name = 'sky';
@@ -49,7 +49,7 @@ function objeto(id, config, material3d, luz, camera, cena){
 		}
 
 		if(Array.isArray(config) === false){
-			if(config.isEnable == true){	
+			if(config.isEnabled == true){	
 				// manager
 				const manager = new THREE.LoadingManager( loadModel );
 				function loadModel() {
@@ -83,7 +83,7 @@ function objeto(id, config, material3d, luz, camera, cena){
 			}
 		}else{
 			config.map((value, index) => {
-				if(value.isEnable == true){
+				if(value.isEnabled == true){
 					// manager
 					const manager = new THREE.LoadingManager( loadModel );
 					function loadModel() {
@@ -118,9 +118,6 @@ function objeto(id, config, material3d, luz, camera, cena){
 			});
 		}
 
-
-
-
 		renderer = new THREE.WebGLRenderer();
 		renderer.setPixelRatio( window.devicePixelRatio );
 		renderer.setSize( canvasWidth, canvasheight);
@@ -129,6 +126,7 @@ function objeto(id, config, material3d, luz, camera, cena){
 		controls.setGizmosVisible(false);
 		controls.addEventListener( 'change', render );
 	}
+	
 	function animate() {
 
 		requestAnimationFrame( animate );

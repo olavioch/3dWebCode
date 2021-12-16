@@ -5,35 +5,35 @@ import "./model.obj";
 import "./cube.obj";
 
 const configModel = {
-    isEnable: true,
+    isEnabled: true,
     name: "model.obj",
     position : [0.2,-0.6,2],
     rotation: [0,-0.6,0],
     scale: [1,1,1]
 }
 const configCube = {
-    isEnable: false,
+    isEnabled: false,
     name: "cube.obj",
     position : [0.2,-2.2, 2],
     rotation: [0,0,0],
     scale: [0.5,0.5,0.5]
 }
 const configBola = {
-    isEnable: true,
+    isEnabled: true,
     name: "bola.obj",
     position : [0,0,0],
     rotation: [0,0,0],
     scale: [1,1,1]
 }
 const configBolaB = {
-    isEnable: true,
+    isEnabled: true,
     name: "bolaB.obj",
     position : [0,0,0],
     rotation: [0,0,0],
     scale: [1,1,1]
 }
 const configBolaC = {
-    isEnable: true,
+    isEnabled: true,
     name: "bolaC.obj",
     position : [0,0,0],
     rotation: [0,0,0], 

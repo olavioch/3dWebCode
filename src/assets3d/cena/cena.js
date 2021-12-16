@@ -1,17 +1,17 @@
 import './back.jpg';
 
 const cena = {
-    cor: ['texture', 'back.jpg'],
+    color: ['texture', 'back.jpg'],
     width: window.innerWidth,
     height: window.innerHeight
 }
 const cenaColor ={
-    cor: ['color', 0xeee9d9],
+    color: ['color', 0xeee9d9],
     width: 500,
     height: 300
 }
 const cenaBack ={
-    cor: ['texture', 'back.jpg'],
+    color: ['texture', 'back.jpg'],
     width: 500,
     height: 300
 }
