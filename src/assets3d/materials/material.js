@@ -6,6 +6,8 @@ import './bola.jpg';
 import './metal.jpg'
 import './normalMetal.png';
 import '../cena/back.jpg';
+import './normalConcreto.png';
+import './concreto.jpg';
 
 const normal = new THREE.TextureLoader().load('modelnormal.jpg');
 const textura = new THREE.TextureLoader().load('model.jpg');
@@ -13,6 +15,8 @@ const bolaNormal = new THREE.TextureLoader().load('bolaNormal.png');
 const bola = new THREE.TextureLoader().load('bola.jpg');
 const metalNormal = new THREE.TextureLoader().load('normalMetal.png');
 const metal = new THREE.TextureLoader().load('metal.jpg');
+const concretoNormal = new THREE.TextureLoader().load('normalConcreto.png');
+const concreto= new THREE.TextureLoader().load('concreto.jpg');
 
 const textureReflection = new THREE.TextureLoader().load('back.jpg');
 textureReflection.encoding = THREE.sRGBEncoding;
@@ -26,8 +30,22 @@ const material3d = {
         bumpMap: normal,
         bumpScale: 0.003,
         envMap: textureReflection,
-        envMapIntensity: 2,
-        roughness: 0.4,
+        envMapIntensity: 1.5,
+        roughness: 0,
+        metalness: 0, 
+        flatShading: false
+    }
+}
+const materialConcreto = {
+    transparent: false,
+    mat:{
+        color: new THREE.Color(0xffffff),
+        map: concreto,
+        bumpMap: concretoNormal,
+        bumpScale: 0.003,
+        envMap: textureReflection,
+        envMapIntensity: 1,
+        roughness: 0.3,
         metalness: 0, 
         flatShading: false
     }
@@ -73,7 +91,7 @@ const material3dC = {
     }
 }
 
-export {material3d, material3dA, material3dB, material3dC};
+export {material3d, material3dA, material3dB, material3dC, materialConcreto};
 
 //link para geração de normalmaps:
 // https://cpetry.github.io/NormalMap-Online/
