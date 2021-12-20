@@ -1,25 +1,17 @@
-import Plane from "./assets3d/utils/Plane";
 import objeto from "./assets3d/utils/objeto";
+import Plane from "./assets3d/utils/Plane";
 import "./style.css";
-import "./assets3d/objetos3d/bola.obj";
-import "./assets3d/objetos3d/bolaB.obj";
-import "./assets3d/objetos3d/bolaC.obj";
-import "./assets3d/objetos3d/model.obj";
-import luz from './assets3d/luz';
-import {camera} from './assets3d/camera/camera';
-import {cena, cenaColor, cenaBack} from './assets3d/cena/cena';
-import {material3d, material3dA, material3dB, material3dC} from "./assets3d/materials/material";
+import {luz, luzB} from './assets3d/luz';
+import {camera, camerab} from './assets3d/camera';
+import {cena, cenaColor, cenaBack} from './assets3d/cena';
+import {material3d, material3dA, material3dB, material3dC, material3dD} from "./assets3d/materials";
+import {configModel, configBolaB, configBolaC, configBola} from "./assets3d/objetos3d/config";
 
 
 
 
-
-objeto('hero', 'model.obj', material3d, luz, camera, cena, true);
-
-
-objeto('3dA', 'bola.obj', material3dA, luz, camera, cenaBack, true);
-objeto('3dB', 'bolaB.obj', material3dB, luz, camera, cenaColor, true);
-objeto('3dC', 'bolaC.obj', material3dC, luz, camera, cenaBack, true);
-
-
-//Plane('hero', material3d, luz, camera, cena, true);
+objeto('hero', configModel, material3d, luz, camera, cena);
+objeto('3dA', configBola, material3dA, luz, camera, cenaBack);
+objeto('3dB', configBolaB, material3dB, luz, camera, cenaColor);
+objeto('3dC', configBolaC, material3dC, luz, camera, cenaBack);
+Plane('planeArea', material3dD, luzB, camerab, cena, true);

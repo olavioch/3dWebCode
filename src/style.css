@@ -69,3 +69,17 @@ h2{
     display: inline-block;
     margin: 58px 100px 23px;
 }
+.planeDesc{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    padding-left: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.planeDesc p{
+    width: 35%;
+}
