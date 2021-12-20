@@ -45,6 +45,10 @@ function Plane(id, material3d, luz, camera, cena){
 
 			const geometry = new THREE.PlaneGeometry(window.innerWidth, window.innerHeight);
 			const material = new THREE.MeshStandardMaterial(material3d.mat);
+			if(material3d.transparent == true){
+				material.transparent = material3d.transparent;
+				material.opacity = material3d.opacity;
+			}
 			const plane = new THREE.Mesh(geometry, material);
 			console.log(plane);
 			plane.position.x = window.innerWidth/2;
